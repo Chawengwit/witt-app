@@ -1,0 +1,44 @@
+# Dependencies
+/node_modules
+
+# Next.js build output
+/.next/
+/out/
+
+# Production builds and static exports
+/build
+
+# Environment Variables
+.env*.local
+.env
+
+# Vercel
+.vercel
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Test suite reports
+/coverage
+/reports
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor directories and files
+.vscode
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# System files
+.DS_Store
+
+# Gemini CLI temp directory
+/Users/cw/.gemini/tmp/d9d6002396c630c935f64d53ed28cbb7c05189158975699cd77fea84ac90af2f
