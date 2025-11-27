@@ -14,6 +14,7 @@ const skillCategories = [
       "HTML5/CSS3",
       "JavaScript",
       "Python",
+      "PHP"
     ],
   },
   {
@@ -26,7 +27,10 @@ const skillCategories = [
       "Docker",
       "Vercel",
       "CI/CD",
-      "REST"
+      "Laravel",
+      "RESTful",
+      "Cloudflare R2",
+      "AWS S3",
     ],
   },
   {
@@ -34,11 +38,11 @@ const skillCategories = [
     skills: [
       "SQL",
       "NoSQL",
+      "MySQL",
+      "PostgreSQL",
       "MongoDB",
       "Data Modeling",
-      "Indexing",
       "Caching",
-      "Backup",
       "Disaster Recovery",
     ],
   },
