@@ -134,7 +134,7 @@ export function Contact() {
                   />
                 </div>
 
-                <Button type="submit" className="w-full rounded-full" size="lg" disabled={isSubmitting}>
+                <Button type="submit" className="w-full rounded-full cursor-pointer" size="lg" disabled={isSubmitting}>
                   {isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
               </form>
