@@ -5,28 +5,22 @@ import { Briefcase, Calendar } from 'lucide-react'
 
 const experience = [
   {
-    year: "2023 - Present",
-    title: "Senior Fullstack Developer",
-    company: "TechFlow Solutions",
-    description: "Leading a team of 5 developers building a SaaS platform. Implemented a new design system that improved development speed by 40%.",
+    year: "2022 – Present",
+    title: "Full-Stack Developer",
+    company: "Orisma Technology",
+    description: "Built and maintained enterprise systems—including HR platforms, FinOps dashboards, and marketplace features. Responsible for system architecture, API development, database design, and UI implementation. Improved performance through optimized queries, scalable components, and streamlined user flows.",
   },
   {
-    year: "2021 - 2023",
-    title: "UX Engineer",
-    company: "Creative Digital Agency",
-    description: "Bridged the gap between design and engineering. Built complex interactive experiences for Fortune 500 clients using Next.js and WebGL.",
+    year: "2017 – 2022",
+    title: "Senior Survey Engineer",
+    company: "Italian-Thai Development Public Company Limited (ITD)",
+    description: "Led survey teams for major MRT underground railway projects. Validated survey data, produced technical reports, and coordinated with multiple engineering teams to ensure precision and project accuracy.",
   },
   {
-    year: "2019 - 2021",
-    title: "Frontend Developer",
-    company: "StartUp Inc.",
-    description: "Employee #3. Built the MVP from scratch using React and Node.js. Helped scale the product to 50k active users.",
-  },
-  {
-    year: "2018 - 2019",
-    title: "Freelance Web Designer",
-    company: "Self-Employed",
-    description: "Designed and developed custom websites for small businesses. Focused on responsive design and SEO optimization.",
+    year: "2016 – 2017",
+    title: "Engineer",
+    company: "Bhiraj Buri Group",
+    description: "Supported site engineering operations, project reporting, and coordination with construction teams. Ensured technical accuracy and adherence to engineering standards.",
   },
 ]
 
@@ -34,7 +28,7 @@ export function Timeline() {
   return (
     <section id="timeline" className="py-20">
       <div className="container mx-auto px-4 md:px-6">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Experience</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Journey</h2>
         
         <div className="relative max-w-3xl mx-auto">
           {/* Vertical Line */}

@@ -30,7 +30,7 @@ export function Hero() {
             className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary w-fit text-sm font-medium"
           >
             <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-            UX/UI Designer · Fullstack Developer
+            Fullstack Developer · Engineering
           </motion.div>
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight">
@@ -74,11 +74,11 @@ export function Hero() {
             <div className="space-y-4">
               <div className="flex justify-between items-center p-3 bg-background/50 rounded-xl">
                 <span className="text-sm font-medium">Experience</span>
-                <span className="font-bold">5+ Years</span>
+                <span className="font-bold">9+ Years</span>
               </div>
               <div className="flex justify-between items-center p-3 bg-background/50 rounded-xl">
                 <span className="text-sm font-medium">Projects</span>
-                <span className="font-bold">40+ Delivered</span>
+                <span className="font-bold">11+ Delivered</span>
               </div>
             </div>
 

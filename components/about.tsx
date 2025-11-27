@@ -19,13 +19,13 @@ export function About() {
             <h2 className="text-3xl md:text-4xl font-bold">I am</h2>
             <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
               <p>
-                I’m a developer who cares deeply about the user experience. My journey started in graphic design, but I quickly fell in love with the logic and structure of coding. This hybrid background allows me to bridge the gap between design and engineering.
+                I’m a Fullstack Developer who started in Civil Engineering, now combining analytical rigor with creative coding to build smooth, user-friendly digital experiences.
               </p>
               <p>
-                I approach every project with a "research first" mentality. I believe that the best code is written to solve real user problems, not just to use the latest tech. I prototype, test, build, and iterate until the solution feels natural.
+                I design and build full-stack applications, taking care of the frontend, backend, database architecture, and security. I focus on creating systems that are fast, reliable, and secure, with seamless interactions and maintainable code.
               </p>
               <p>
-                Whether I'm tweaking a micro-interaction in Framer Motion or optimizing a database query in PostgreSQL, my goal is always the same: to build fast, accessible, and delightful digital products.
+                My toolkit includes Next.js, Node.js, Express, PostgreSQL, Tailwind, SCSS, and Docker, and I always approach development with research, prototyping, and iteration to create products users love.
               </p>
             </div>
           </div>
@@ -62,7 +62,7 @@ export function About() {
                   <div>
                     <h3 className="font-bold mb-1">Preferred Stack</h3>
                     <div className="flex flex-wrap gap-2 mt-2">
-                      {["React", "Next.js", "TypeScript", "Tailwind CSS", "Node.js", "PostgreSQL", "Framer Motion"].map((tech) => (
+                      {["React", "Next.js", "TypeScript", "Tailwind CSS", "Node.js", "PostgreSQL"].map((tech) => (
                         <span key={tech} className="px-2 py-1 bg-secondary rounded-md text-xs font-medium">
                           {tech}
                         </span>

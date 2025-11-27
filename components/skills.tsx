@@ -5,29 +5,15 @@ import { Badge } from "@/components/ui/badge"
 
 const skillCategories = [
   {
-    title: "UX/UI Design",
-    skills: [
-      "User Research",
-      "Wireframing",
-      "Prototyping",
-      "Figma",
-      "Design Systems",
-      "Information Architecture",
-      "Interaction Design",
-      "Accessibility (WCAG)",
-    ],
-  },
-  {
     title: "Frontend Development",
     skills: [
       "React",
       "Next.js",
       "TypeScript",
       "Tailwind CSS",
-      "Framer Motion",
       "HTML5/CSS3",
-      "Redux/Zustand",
-      "React Query",
+      "JavaScript",
+      "Python",
     ],
   },
   {
@@ -36,11 +22,24 @@ const skillCategories = [
       "Node.js",
       "Express",
       "PostgreSQL",
-      "Prisma",
-      "Supabase",
+      "Render",
       "Docker",
       "Vercel",
       "CI/CD",
+      "REST"
+    ],
+  },
+  {
+    title: "Database & Storage",
+    skills: [
+      "SQL",
+      "NoSQL",
+      "MongoDB",
+      "Data Modeling",
+      "Indexing",
+      "Caching",
+      "Backup",
+      "Disaster Recovery",
     ],
   },
 ]
@@ -50,7 +49,7 @@ export function Skills() {
     <section id="skills" className="py-20 bg-secondary/30">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Skills & Expertise</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Stack</h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             A fullstack skillset with a focus on building scalable, user-centric applications.
           </p>

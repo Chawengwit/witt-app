@@ -22,7 +22,7 @@ const projects = [
     title: "Travel Booking Platform",
     role: "Frontend Lead",
     description: "A modern booking engine for a boutique travel agency. Focused on immersive visuals and a seamless checkout flow.",
-    tags: ["React", "Tailwind", "Framer Motion", "Stripe"],
+    tags: ["React", "Tailwind", "Stripe"],
     metrics: "↓ 15% cart abandonment",
     image: "/travel-website-ui.jpg",
     link: "#",
@@ -46,7 +46,7 @@ export function Projects() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-2">Works</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-2">Project</h2>
             <p className="text-muted-foreground text-lg">
               A collection of projects focusing on quality, performance, and user experience.
             </p>
