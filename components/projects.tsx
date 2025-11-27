@@ -101,7 +101,7 @@ export function Projects() {
                     <div className="flex gap-4 mt-auto">
                       <Button className="rounded-full" asChild>
                         <a href={project.link} target="_blank" rel="noopener noreferrer">
-                          View Project <ExternalLink className="ml-2 h-4 w-4" />
+                          View Project
                         </a>
                       </Button>
                       <Button variant="ghost" size="icon" className="rounded-full" asChild>
