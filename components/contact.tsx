@@ -6,7 +6,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Label } from "@/components/ui/label"
 import { motion } from "framer-motion"
-import { Mail, Send, Github, Linkedin, Twitter } from 'lucide-react'
+import { Mail, Send, Github, Linkedin, Twitter, Instagram } from 'lucide-react'
 import { useState } from "react"
 
 export function Contact() {
@@ -34,7 +34,7 @@ export function Contact() {
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Let’s build something together</h2>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              I’m currently open for freelance projects and new opportunities. Whether you have a question or just want to say hi, I’ll try my best to get back to you!
+              I’m currently open to full-time roles and freelance projects. If you’re interested in working together or would like to discuss an opportunity, feel free to reach out — I’ll get back to you as soon as I can.
             </p>
             
             <div className="space-y-6">
@@ -44,8 +44,8 @@ export function Contact() {
                 </div>
                 <div>
                   <p className="text-sm font-medium text-muted-foreground">Email</p>
-                  <a href="mailto:hello@example.com" className="text-lg font-bold hover:text-primary transition-colors">
-                    hello@example.com
+                  <a href="mailto:Chawengwit.w@gmail.com" className="text-lg font-bold hover:text-primary transition-colors">
+                    Chawengwit.w@gmail.com
                   </a>
                 </div>
               </div>
@@ -54,18 +54,18 @@ export function Contact() {
                 <p className="text-sm font-medium text-muted-foreground mb-4">Connect with me</p>
                 <div className="flex gap-4">
                   <Button variant="outline" size="icon" className="rounded-full" asChild>
-                    <a href="#" aria-label="GitHub">
+                    <a href="https://github.com/Chawengwit" aria-label="GitHub">
                       <Github className="w-5 h-5" />
                     </a>
                   </Button>
                   <Button variant="outline" size="icon" className="rounded-full" asChild>
-                    <a href="#" aria-label="LinkedIn">
+                    <a href="www.linkedin.com/in/chawengwit-w" aria-label="LinkedIn">
                       <Linkedin className="w-5 h-5" />
                     </a>
                   </Button>
                   <Button variant="outline" size="icon" className="rounded-full" asChild>
-                    <a href="#" aria-label="Twitter">
-                      <Twitter className="w-5 h-5" />
+                    <a href="https://www.instagram.com/wittupuu/" aria-label="Instargram">
+                      <Instagram className="w-5 h-5" />
                     </a>
                   </Button>
                 </div>
@@ -99,11 +99,11 @@ export function Contact() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="space-y-2">
                   <Label htmlFor="name">Name</Label>
-                  <Input id="name" placeholder="John Doe" required className="rounded-xl" />
+                  <Input id="name" placeholder="John Cena" required className="rounded-xl" />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="email">Email</Label>
-                  <Input id="email" type="email" placeholder="john@example.com" required className="rounded-xl" />
+                  <Input id="email" type="email" placeholder="john_007@mail.com" required className="rounded-xl" />
                 </div>
                 
                 <div className="space-y-3">

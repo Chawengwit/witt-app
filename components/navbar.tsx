@@ -21,11 +21,11 @@ export function Navbar() {
   }, [])
 
   const navLinks = [
-    { name: "About", href: "#about" },
+    { name: "Me", href: "#about" },
     { name: "Work", href: "#work" },
-    { name: "Skills", href: "#skills" },
-    { name: "Timeline", href: "#timeline" },
-    { name: "Contact", href: "#contact" },
+    { name: "Stack", href: "#skills" },
+    { name: "Journey", href: "#timeline" },
+    { name: "Find Me", href: "#contact" },
   ]
 
   return (

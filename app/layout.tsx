@@ -8,9 +8,9 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.app',
+  title: 'Wit APP',
+  description: 'Portfolio of Chawengwit (Wit), a UX/UI designer and fullstack developer specializing in modern web experiences.',
+  generator: 'Wit APP',
   icons: {
     icon: [
       {

@@ -34,12 +34,12 @@ export function Hero() {
           </motion.div>
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight">
-            Hi, I’m Chris. <br />
+            Hi, I’m Chawengwit. <br />
             I <span className="text-primary">design</span> and <span className="text-primary">build</span> modern web experiences.
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-lg leading-relaxed">
-            I blend user-centered design thinking with robust engineering to create products that look great and perform perfectly.
+            A Full-Stack Developer who transitioned from Civil Engineering into the world of software. I build practical, scalable, and user-focused applications—turning complex ideas into clean, functional systems.
           </p>
 
           <div className="flex flex-wrap gap-4 pt-4">
@@ -66,7 +66,7 @@ export function Hero() {
                 CW
               </div>
               <div>
-                <h3 className="text-xl font-bold">Chris Williams</h3>
+                <h3 className="text-xl font-bold">Chawengwit W.</h3>
                 <p className="text-sm text-muted-foreground">Senior Fullstack Dev</p>
               </div>
             </div>

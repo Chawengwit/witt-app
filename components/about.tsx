@@ -16,7 +16,7 @@ export function About() {
           className="grid lg:grid-cols-2 gap-12 items-start"
         >
           <div className="space-y-6">
-            <h2 className="text-3xl md:text-4xl font-bold">About Me</h2>
+            <h2 className="text-3xl md:text-4xl font-bold">I am</h2>
             <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
               <p>
                 I’m a developer who cares deeply about the user experience. My journey started in graphic design, but I quickly fell in love with the logic and structure of coding. This hybrid background allows me to bridge the gap between design and engineering.

@@ -46,7 +46,7 @@ export function Projects() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-2">Selected Work</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-2">Works</h2>
             <p className="text-muted-foreground text-lg">
               A collection of projects focusing on quality, performance, and user experience.
             </p>
