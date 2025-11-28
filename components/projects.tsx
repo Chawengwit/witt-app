@@ -51,9 +51,6 @@ export function Projects() {
               A collection of projects focusing on quality, performance, and user experience.
             </p>
           </div>
-          <Button variant="outline" className="rounded-full">
-            View GitHub <Github className="ml-2 h-4 w-4" />
-          </Button>
         </div>
 
         <div className="space-y-12">
