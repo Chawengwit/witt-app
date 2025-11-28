@@ -54,15 +54,11 @@ export function Timeline() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
-                className={`relative flex flex-col md:flex-row gap-8 ${
-                  index % 2 === 0 ? "md:flex-row-reverse" : ""
-                }`}
+                className={`relative flex flex-col md:flex-row gap-8 ${index % 2 === 0 ? "md:flex-row-reverse" : ""}`}
               >
-                {/* Timeline Dot */}
-                <div className="absolute left-[-5px] md:left-1/2 top-0 w-2.5 h-2.5 rounded-full bg-primary transform md:-translate-x-1/2 z-10 ring-4 ring-background" />
-
-                <div className="md:w-1/2" />
-                
+              {/* Timeline Dot */}
+              <div className="absolute left-[-5px] md:left-1/2 top-0 w-2.5 h-2.5 rounded-full bg-primary transform md:-translate-x-1/2 z-10 ring-4 ring-background" />
+              <div className="md:w-1/2" />
                 <div className={`md:w-1/2 pl-8 md:pl-0 ${index % 2 === 0 ? "md:pr-12 text-left md:text-right" : "md:pl-12 text-left"}`}>
                   <div className={`flex items-center gap-2 text-sm text-primary font-medium mb-2 ${index % 2 === 0 ? "md:justify-end" : "md:justify-start"}`}>
                     <Calendar className="w-4 h-4" />
@@ -70,9 +66,7 @@ export function Timeline() {
                   </div>
                   <h3 className="text-xl font-bold">{item.title}</h3>
                   <p className="text-muted-foreground font-medium mb-2">{item.company}</p>
-                  <p className="text-muted-foreground leading-relaxed text-sm">
-                    {item.description}
-                  </p>
+                  <p className="text-muted-foreground leading-relaxed text-sm">{item.description}</p>
                 </div>
               </motion.div>
             ))}
