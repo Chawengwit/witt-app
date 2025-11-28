@@ -43,9 +43,17 @@ export function Hero() {
           </p>
 
           <div className="flex flex-wrap gap-4 pt-4">
-            <Button asChild size="lg" className="rounded-full px-8 text-base">
-              <Link href="#contact">
-                Let’s work together <ArrowRight className="ml-2 h-4 w-4" />
+            <Button asChild size="lg" className="rounded-full px-8 text-base group">
+              <Link href="#contact" className="flex items-center gap-2">
+                Let's work together 
+                <motion.div
+                  initial={{ x: 0 }}
+                  whileHover={{ x: 4 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                  className="ml-2"
+                >
+                  <ArrowRight className="h-4 w-4" />
+                </motion.div>
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="rounded-full px-8 text-base">
