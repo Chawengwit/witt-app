@@ -2,13 +2,12 @@
 
 import * as React from "react"
 import Link from "next/link"
-import { Moon, Sun, Menu, X } from 'lucide-react'
-import { useTheme } from "next-themes"
+import { Menu, X } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { motion, AnimatePresence } from "framer-motion"
+import { ThemeToggleButton } from "./theme-toggle-button"
 
 export function Navbar() {
-  const { setTheme, theme } = useTheme()
   const [isScrolled, setIsScrolled] = React.useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false)
 
@@ -53,33 +52,18 @@ export function Navbar() {
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
             </Link>
           ))}
-          <Button variant="default" size="sm" className="rounded-full px-6 cursor-pointer">
-            Download CV
-          </Button>
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            className="rounded-full cursor-pointer"
-          >
-            <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-            <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-            <span className="sr-only">Toggle theme</span>
-          </Button>
+          {/* TODO: Replace with your actual CV file */}
+          <a href="/placeholder-cv.pdf" download>
+            <Button variant="default" size="sm" className="rounded-full px-6 cursor-pointer">
+              Download CV
+            </Button>
+          </a>
+          <ThemeToggleButton />
         </nav>
 
         {/* Mobile Menu Toggle */}
         <div className="flex items-center gap-4 md:hidden">
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            className="rounded-full"
-          >
-            <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-            <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-            <span className="sr-only">Toggle theme</span>
-          </Button>
+          <ThemeToggleButton />
           <Button
             variant="ghost"
             size="icon"
@@ -110,7 +94,9 @@ export function Navbar() {
                   {link.name}
                 </Link>
               ))}
-              <Button className="w-full rounded-full mt-4">Download CV</Button>
+              <a href="/placeholder-cv.pdf" download className="w-full">
+                <Button className="w-full rounded-full mt-4">Download CV</Button>
+              </a>
             </div>
           </motion.div>
         )}

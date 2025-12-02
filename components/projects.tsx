@@ -6,39 +6,7 @@ import { ExternalLink, Github } from 'lucide-react'
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-
-const projects = [
-  {
-    title: "Media Platform Template",
-    role: "UX/UI • Fullstack Developer",
-    description: "Landing page and admin panel blend marketing content with authenticated management workflows, serving responsive product galleries.",
-    tags: ["Javascript", "Node.js", "PostgreSQL", "S3", "Docker"],
-    metrics: "", //↓ 15% cart abandonment
-    images: ["/d1.png", "/d2.png", "/d3.png"], // ["/modern-dashboard-ui.jpg", "/ai-saas-interface.jpg"],
-    link: null,
-    github: "https://github.com/Chawengwit/de-dilute",
-  },
-  {
-    title: "Installment & Sales Management System",
-    role: "UX/UI • Fullstack Developer",
-    description: "A full-cycle installment and sales management platform designed for businesses that need customer tracking, product management, contract creation, and installment scheduling. Includes automated document generation and real-time insights for payment status and risk monitoring.",
-    tags: ["Node.js", "SCSS", "PostgreSQL", "S3", "Docker"],
-    metrics: "", 
-    images: ["/travel-website-ui.jpg", "/modern-dashboard-ui.jpg"],
-    link: null,
-    github: null,
-  },
-  {
-    title: "Personal Profile Web App",
-    role: "UX/UI • Fullstack Developer",
-    description: "A customizable personal portfolio web app with “Edit Mode” accessible via keyboard shortcut + password prompt. Built for creators who want a no-login, client-side editable template—ideal for digital product sales.",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
-    metrics: "",
-    images: ["/p1.png", "/p2.png", "/p3.png"], // ["/ai-saas-interface.jpg", "/travel-website-ui.jpg"]
-    link: null,
-    github: "https://github.com/Chawengwit/witt-app",
-  },
-]
+import { projects } from "@/lib/data"
 
 export function Projects() {
   return (

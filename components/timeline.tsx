@@ -1,40 +1,8 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Briefcase, Calendar } from 'lucide-react'
-
-const experience = [
-  {
-    year: "2022 – Present",
-    title: "Full-Stack Developer",
-    company: "Orisma Technology",
-    description: "Maintained enterprise systems—including HR platforms, FinOps dashboards. Responsible for system architecture, API development, database design, and UI implementation. Improved performance through optimized queries, scalable components, and streamlined user flows.",
-  },
-  {
-    year: "2022 – 2023",
-    title: "Front-End Developer",
-    company: "Orisma Technology",
-    description: "Crafted clean, responsive interfaces for HR, FinOps, and marketplace systems. Focused on usability, performance, and scalable UI architecture—building reusable components and smooth user flows that feel fast and intuitive.",
-  },
-  {
-    year: "2020 – 2022",
-    title: "Senior Survey Engineer",
-    company: "Italian-Thai Development Public Company Limited (ITD)",
-    description: "Led survey teams for major MRT underground railway projects.",
-  },
-    {
-    year: "2017 – 2020",
-    title: "Survey Engineer",
-    company: "Italian-Thai Development Public Company Limited (ITD)",
-    description: "On railway projects. Validated survey data, produced technical reports, and coordinated with multiple engineering teams to ensure precision and project accuracy.",
-  },
-  {
-    year: "2016 – 2017",
-    title: "Engineer",
-    company: "Bhiraj Buri Group",
-    description: "Supported site engineering operations, project reporting, and coordination with construction teams. Ensured technical accuracy and adherence to engineering standards.",
-  },
-]
+import { Calendar } from 'lucide-react'
+import { experience } from "@/lib/data"
 
 export function Timeline() {
   return (

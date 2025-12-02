@@ -6,20 +6,50 @@ import { Textarea } from "@/components/ui/textarea"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Label } from "@/components/ui/label"
 import { motion } from "framer-motion"
-import { Mail, Send, Github, Linkedin, Twitter, Instagram } from 'lucide-react'
-import { useState } from "react"
+import { Mail, Send, Github, Linkedin, Instagram } from 'lucide-react'
+import { useState, useRef } from "react"
+import { useToast } from "@/components/ui/use-toast"
 
 export function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const { toast } = useToast()
+  const formRef = useRef<HTMLFormElement>(null)
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsSubmitting(true)
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1500))
-    setIsSubmitting(false)
-    setIsSubmitted(true)
+
+    const formData = new FormData(e.currentTarget)
+    const name = formData.get("name") as string
+    const email = formData.get("email") as string
+    const message = formData.get("message") as string
+
+    try {
+      const response = await fetch('/api/send', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name, email, message }),
+      })
+
+      if (response.ok) {
+        setIsSubmitted(true)
+        formRef.current?.reset()
+      } else {
+        throw new Error("Failed to send message.")
+      }
+    } catch (error) {
+      console.error(error)
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again later.",
+        variant: "destructive",
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -64,7 +94,7 @@ export function Contact() {
                     </a>
                   </Button>
                   <Button variant="outline" size="icon" className="rounded-full" asChild>
-                    <a href="https://www.instagram.com/wittupuu" aria-label="Instargram">
+                    <a href="https://www.instagram.com/wittupuu" aria-label="Instagram">
                       <Instagram className="w-5 h-5" />
                     </a>
                   </Button>
@@ -96,29 +126,29 @@ export function Contact() {
                 </Button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
                 <div className="space-y-2">
                   <Label htmlFor="name">Name</Label>
-                  <Input id="name" placeholder="John Cena" required className="rounded-xl" />
+                  <Input id="name" name="name" placeholder="John Cena" required className="rounded-xl" />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="email">Email</Label>
-                  <Input id="email" type="email" placeholder="john_007@mail.com" required className="rounded-xl" />
+                  <Input id="email" name="email" type="email" placeholder="john_007@mail.com" required className="rounded-xl" />
                 </div>
                 
                 <div className="space-y-3">
                   <Label>I'm interested in...</Label>
                   <div className="flex flex-wrap gap-4">
                     <div className="flex items-center space-x-2">
-                      <Checkbox id="project" />
+                      <Checkbox id="project" name="interest" value="project" />
                       <Label htmlFor="project" className="font-normal">Project Inquiry</Label>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <Checkbox id="collab" />
+                      <Checkbox id="collab" name="interest" value="collab" />
                       <Label htmlFor="collab" className="font-normal">Collaboration</Label>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <Checkbox id="hi" />
+                      <Checkbox id="hi" name="interest" value="hi" />
                       <Label htmlFor="hi" className="font-normal">Just saying hi</Label>
                     </div>
                   </div>
@@ -128,6 +158,7 @@ export function Contact() {
                   <Label htmlFor="message">Message</Label>
                   <Textarea 
                     id="message" 
+                    name="message"
                     placeholder="Tell me about your project..." 
                     className="min-h-[150px] rounded-xl resize-none" 
                     required 

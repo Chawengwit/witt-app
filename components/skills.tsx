@@ -2,51 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Badge } from "@/components/ui/badge"
-
-const skillCategories = [
-  {
-    title: "Frontend Development",
-    skills: [
-      "React",
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "HTML5/CSS3",
-      "JavaScript",
-      "Python",
-      "PHP"
-    ],
-  },
-  {
-    title: "Backend & DevOps",
-    skills: [
-      "Node.js",
-      "Express",
-      "PostgreSQL",
-      "Render",
-      "Docker",
-      "Vercel",
-      "CI/CD",
-      "Laravel",
-      "RESTful",
-      "Cloudflare R2",
-      "AWS S3",
-    ],
-  },
-  {
-    title: "Database & Storage",
-    skills: [
-      "SQL",
-      "NoSQL",
-      "MySQL",
-      "PostgreSQL",
-      "MongoDB",
-      "Data Modeling",
-      "Caching",
-      "Disaster Recovery",
-    ],
-  },
-]
+import { skillCategories } from "@/lib/data"
 
 export function Skills() {
   return (
