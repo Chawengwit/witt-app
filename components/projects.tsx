@@ -1,5 +1,6 @@
 "use client"
 
+import EmblaCarousel from "./project-carousel"
 import { motion } from "framer-motion"
 import { ExternalLink, Github } from 'lucide-react'
 import Image from "next/image"
@@ -14,7 +15,7 @@ const projects = [
     description: "Landing page and admin panel blend marketing content with authenticated management workflows, serving responsive product galleries.",
     tags: ["Javascript", "Node.js", "PostgreSQL", "S3", "Docker"],
     metrics: "", //↓ 15% cart abandonment
-    image: "/modern-dashboard-ui.jpg",
+    images: ["/modern-dashboard-ui.jpg", "/ai-saas-interface.jpg"],
     link: null,
     github: "https://github.com/Chawengwit/de-dilute",
   },
@@ -24,7 +25,7 @@ const projects = [
     description: "A full-cycle installment and sales management platform designed for businesses that need customer tracking, product management, contract creation, and installment scheduling. Includes automated document generation and real-time insights for payment status and risk monitoring.",
     tags: ["Node.js", "SCSS", "PostgreSQL", "S3", "Docker"],
     metrics: "", 
-    image: "/travel-website-ui.jpg",
+    images: ["/travel-website-ui.jpg", "/modern-dashboard-ui.jpg"],
     link: null,
     github: null,
   },
@@ -34,7 +35,7 @@ const projects = [
     description: "A customizable personal portfolio web app with “Edit Mode” accessible via keyboard shortcut + password prompt. Built for creators who want a no-login, client-side editable template—ideal for digital product sales.",
     tags: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
     metrics: "",
-    image: "/ai-saas-interface.jpg",
+    images: ["/ai-saas-interface.jpg", "/travel-website-ui.jpg"],
     link: null,
     github: "https://github.com/Chawengwit/witt-app",
   },
@@ -64,14 +65,8 @@ export function Projects() {
             >
               <Card className="overflow-hidden border-none shadow-lg hover:shadow-xl transition-shadow duration-300 bg-secondary/20">
                 <CardContent className="p-0 grid md:grid-cols-2 gap-6">
-                  <div className="relative h-64 md:h-auto overflow-hidden group">
-                    <Image
-                      src={project.image || "/placeholder.svg"}
-                      alt={project.title}
-                      fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-300" />
+                  <div className="relative h-64 md:h-96 overflow-hidden">
+                    <EmblaCarousel images={project.images} options={{ loop: true }} />
                   </div>
                   <div className="p-6 md:p-8 flex flex-col justify-center">
                     <div className="flex justify-between items-start mb-4">
