@@ -9,34 +9,34 @@ import { Card, CardContent } from "@/components/ui/card"
 
 const projects = [
   {
-    title: "E-Commerce Dashboard",
-    role: "UX/UI & Fullstack",
-    description: "A comprehensive analytics dashboard for online retailers. Features real-time data visualization, inventory management, and order processing.",
-    tags: ["Next.js", "TypeScript", "Tremor", "Supabase"],
-    metrics: "↑ 30% faster reporting",
+    title: "Media Platform Template",
+    role: "UX/UI • Fullstack Developer",
+    description: "Landing page and admin panel blend marketing content with authenticated management workflows, serving responsive product galleries.",
+    tags: ["Javascript", "Node.js", "PostgreSQL", "S3", "Docker"],
+    metrics: "", //↓ 15% cart abandonment
     image: "/modern-dashboard-ui.jpg",
-    link: "#",
-    github: "#",
+    link: null,
+    github: "https://github.com/Chawengwit/de-dilute",
   },
   {
-    title: "Travel Booking Platform",
-    role: "Frontend Lead",
-    description: "A modern booking engine for a boutique travel agency. Focused on immersive visuals and a seamless checkout flow.",
-    tags: ["React", "Tailwind", "Stripe"],
-    metrics: "↓ 15% cart abandonment",
+    title: "Installment & Sales Management System",
+    role: "UX/UI • Fullstack Developer",
+    description: "A full-cycle installment and sales management platform designed for businesses that need customer tracking, product management, contract creation, and installment scheduling. Includes automated document generation and real-time insights for payment status and risk monitoring.",
+    tags: ["Node.js", "SCSS", "PostgreSQL", "S3", "Docker"],
+    metrics: "", 
     image: "/travel-website-ui.jpg",
-    link: "#",
-    github: "#",
+    link: null,
+    github: null,
   },
   {
-    title: "AI Content Generator",
-    role: "Fullstack Developer",
-    description: "SaaS application that uses AI to help marketers generate blog posts and social media captions.",
-    tags: ["Next.js", "OpenAI API", "PostgreSQL", "Vercel"],
-    metrics: "10k+ active users",
+    title: "Personal Profile Web App",
+    role: "UX/UI • Fullstack Developer",
+    description: "A customizable personal portfolio web app with “Edit Mode” accessible via keyboard shortcut + password prompt. Built for creators who want a no-login, client-side editable template—ideal for digital product sales.",
+    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
+    metrics: "",
     image: "/ai-saas-interface.jpg",
-    link: "#",
-    github: "#",
+    link: null,
+    github: "https://github.com/Chawengwit/witt-app",
   },
 ]
 
@@ -96,16 +96,24 @@ export function Projects() {
                       ))}
                     </div>
                     <div className="flex gap-4 mt-auto">
-                      <Button className="rounded-full" asChild>
-                        <a href={project.link} target="_blank" rel="noopener noreferrer">
-                          View Project
-                        </a>
-                      </Button>
-                      <Button variant="ghost" size="icon" className="rounded-full" asChild>
-                        <a href={project.github} target="_blank" rel="noopener noreferrer">
-                          <Github className="h-5 w-5" />
-                        </a>
-                      </Button>
+                      {
+                        project.link ? (
+                          <Button className="rounded-full" asChild>
+                            <a href={project.link} target="_blank" rel="noopener noreferrer">
+                              View Project <ExternalLink className="w-4 h-4 ml-1" />
+                            </a>
+                          </Button>
+                        ) : null
+                      }
+                      {
+                        project.github ? (  
+                          <Button variant="ghost" size="icon" className="rounded-full" asChild>
+                            <a href={project.github} target="_blank" rel="noopener noreferrer">
+                              <Github className="h-5 w-5" />
+                            </a>
+                          </Button>
+                        ) : null
+                      }
                     </div>
                   </div>
                 </CardContent>
