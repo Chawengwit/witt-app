@@ -10,15 +10,15 @@ export function Footer() {
         </p>
         
         <div className="flex items-center gap-6">
-          <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
+          <Link href="https://github.com/Chawengwit" className="text-muted-foreground hover:text-primary transition-colors">
             <Github className="w-5 h-5" />
             <span className="sr-only">GitHub</span>
           </Link>
-          <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
+          <Link href="https://www.linkedin.com/in/chawengwit-w" className="text-muted-foreground hover:text-primary transition-colors">
             <Linkedin className="w-5 h-5" />
             <span className="sr-only">LinkedIn</span>
           </Link>
-          <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
+          <Link href="https://www.instagram.com/wittupuu" className="text-muted-foreground hover:text-primary transition-colors">
             <Twitter className="w-5 h-5" />
             <span className="sr-only">Twitter</span>
           </Link>

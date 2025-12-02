@@ -59,12 +59,12 @@ export function Contact() {
                     </a>
                   </Button>
                   <Button variant="outline" size="icon" className="rounded-full" asChild>
-                    <a href="www.linkedin.com/in/chawengwit-w" aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/in/chawengwit-w" aria-label="LinkedIn">
                       <Linkedin className="w-5 h-5" />
                     </a>
                   </Button>
                   <Button variant="outline" size="icon" className="rounded-full" asChild>
-                    <a href="https://www.instagram.com/wittupuu/" aria-label="Instargram">
+                    <a href="https://www.instagram.com/wittupuu" aria-label="Instargram">
                       <Instagram className="w-5 h-5" />
                     </a>
                   </Button>
