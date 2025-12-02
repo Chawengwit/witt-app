@@ -18,7 +18,7 @@ export const projects = [
     description: "A full-cycle installment and sales management platform designed for businesses that need customer tracking, product management, contract creation, and installment scheduling. Includes automated document generation and real-time insights for payment status and risk monitoring.",
     tags: ["Node.js", "SCSS", "PostgreSQL", "S3", "Docker"],
     metrics: "", 
-    images: ["/travel-website-ui.jpg", "/modern-dashboard-ui.jpg"],
+    images: ["/i1.png", "/i2.png", "/i3.png", "/i4.png"],
     link: null,
     github: null,
   },
