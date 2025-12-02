@@ -14,7 +14,7 @@ type PropType = {
 const EmblaCarousel: React.FC<PropType> = (props) => {
   const { images, options } = props
   const [emblaRef] = useEmblaCarousel(options, [
-    Autoplay({ playOnInit: true, delay: 6000 })
+    Autoplay({ playOnInit: true, delay: 5000 })
   ])
 
   return (
