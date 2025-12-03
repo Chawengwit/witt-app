@@ -32,13 +32,13 @@ export const metadata: Metadata = {
     title: 'App with Wit',
     description:
       'Portfolio of Chawengwit (Wit), a UX/UI designer and fullstack developer specializing in modern web experiences.',
-    url: 'https://witt.app',
+    url: 'https://witt-app-rho.vercel.app',
     siteName: 'App with Wit',
     type: 'website',
     locale: 'en_US',
     images: [
       {
-        url: '/og-image.png',
+        url: 'https://witt-app-rho.vercel.app/og-image.png',
         width: 1200,
         height: 630,
         alt: 'App with Wit',
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     title: 'App with Wit',
     description:
       'Portfolio of Chawengwit (Wit), a UX/UI designer and fullstack developer specializing in modern web experiences.',
-    images: ['/og-image.png'],
+    images: ['https://witt-app-rho.vercel.app/og-image.png'],
   },
 
 }
