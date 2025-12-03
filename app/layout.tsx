@@ -8,6 +8,7 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://witt-app-rho.vercel.app'),
   title: 'App with Wit',
   description: 'Portfolio of Chawengwit (Wit), a UX/UI designer and fullstack developer specializing in modern web experiences.',
   generator: 'Wit APP',
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     images: [
       {
-        url: 'https://witt-app-rho.vercel.app/og-image.png',
+        url: '/og-image.png',
         width: 1200,
         height: 630,
         alt: 'App with Wit',
@@ -50,7 +51,7 @@ export const metadata: Metadata = {
     title: 'App with Wit',
     description:
       'Portfolio of Chawengwit (Wit), a UX/UI designer and fullstack developer specializing in modern web experiences.',
-    images: ['https://witt-app-rho.vercel.app/og-image.png'],
+    images: ['/og-image.png'],
   },
 
 }
