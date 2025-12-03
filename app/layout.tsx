@@ -28,6 +28,31 @@ export const metadata: Metadata = {
     ],
     apple: '/icon-light-32x32.png',
   },
+  openGraph: {
+    title: 'App with Wit',
+    description:
+      'Portfolio of Chawengwit (Wit), a UX/UI designer and fullstack developer specializing in modern web experiences.',
+    url: 'https://witt-app-rho.vercel.app',
+    siteName: 'App with Wit',
+    type: 'website',
+    locale: 'en_US',
+    images: [
+      {
+        url: 'https://witt-app-rho.vercel.app/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'App with Wit',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'App with Wit',
+    description:
+      'Portfolio of Chawengwit (Wit), a UX/UI designer and fullstack developer specializing in modern web experiences.',
+    images: ['https://witt-app-rho.vercel.app/og-image.png'],
+  },
+
 }
 
 export default function RootLayout({
