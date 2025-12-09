@@ -74,7 +74,7 @@ export function Hero() {
                 CW
               </div>
               <div>
-                <h3 className="text-xl font-bold">Chawengwit W.</h3>
+                <h3 className="text-xl font-bold">Chawengwit</h3>
                 <p className="text-sm text-muted-foreground">Senior Fullstack Dev</p>
               </div>
             </div>

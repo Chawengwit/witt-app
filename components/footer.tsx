@@ -6,7 +6,7 @@ export function Footer() {
     <footer className="py-8 border-t bg-background">
       <div className="container mx-auto px-4 md:px-6 flex flex-col md:flex-row justify-between items-center gap-4">
         <p className="text-sm text-muted-foreground text-center md:text-left">
-          © {new Date().getFullYear()} Chawengwit W.. Crafted with care.
+          © {new Date().getFullYear()} Chawengwit Crafted with care.
         </p>
         
         <div className="flex items-center gap-6">
