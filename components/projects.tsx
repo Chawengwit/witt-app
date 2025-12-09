@@ -30,7 +30,7 @@ export function Projects() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
             >
-              <Card className="overflow-hidden border-none shadow-lg hover:shadow-xl transition-shadow duration-300 bg-secondary/20">
+              <Card className="overflow-hidden border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <CardContent className="p-0 grid md:grid-cols-2 gap-6">
                   <div className="relative h-64 md:h-96 overflow-hidden">
                     <EmblaCarousel images={project.images} options={{ loop: true }} />
