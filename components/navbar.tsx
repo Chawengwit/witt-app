@@ -36,9 +36,7 @@ export function Navbar() {
     
     // Close mobile menu if it's open
     if (isMobileMenuOpen) {
-      setTimeout(() => {
-        setIsMobileMenuOpen(false)
-      }, 150)
+      setIsMobileMenuOpen(false)
     }
   }
 
@@ -48,7 +46,26 @@ export function Navbar() {
     { name: "Stack", href: "#skills" },
     { name: "Journey", href: "#timeline" },
     { name: "Find Me", href: "#contact" },
-]
+  ]
+
+  const menuVariants = {
+    opened: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        ease: "easeInOut",
+        duration: 0.3
+      }
+    },
+    closed: {
+      opacity: 0,
+      y: "-100%",
+      transition: {
+        ease: "easeInOut",
+        duration: 0.3
+      }
+    }
+  }
 
   return (
     <header
@@ -99,10 +116,11 @@ export function Navbar() {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-background border-b"
+            initial="closed"
+            animate="opened"
+            exit="closed"
+            variants={menuVariants}
+            className="absolute top-full left-0 right-0 md:hidden bg-background border-b"
           >
             <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
               {navLinks.map((link) => (
