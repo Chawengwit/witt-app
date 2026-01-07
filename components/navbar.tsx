@@ -12,6 +12,7 @@ import { handleSmoothScroll } from "@/lib/utils"
 export function Navbar() {
   const [isScrolled, setIsScrolled] = React.useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false)
+  const mobileMenuRef = React.useRef<HTMLDivElement>(null)
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -20,6 +21,28 @@ export function Navbar() {
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
+
+  React.useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        isMobileMenuOpen &&
+        mobileMenuRef.current &&
+        !mobileMenuRef.current.contains(event.target as Node)
+      ) {
+        const target = event.target as HTMLElement
+        // Check if the click is on the menu toggle button
+        if (target.closest('.lucide-react')) {
+          return
+        }
+        setIsMobileMenuOpen(false)
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside)
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside)
+    }
+  }, [isMobileMenuOpen])
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     handleSmoothScroll(e)
@@ -104,6 +127,7 @@ export function Navbar() {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
+            ref={mobileMenuRef}
             initial="closed"
             animate="opened"
             exit="closed"
