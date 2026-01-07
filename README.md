@@ -60,3 +60,25 @@ To run the linter and check for code quality issues:
 ```sh
 pnpm lint
 ```
+
+## Project Structure
+
+The project is organized into the following directories:
+
+-   **/app**: Contains the core application logic, including pages and API routes.
+    -   `page.tsx`: The main entry point of the application, which combines all the different sections.
+    -   `layout.tsx`: The main layout of the application, which includes the theme provider.
+    -   `/api`: Contains the API routes for the application.
+-   **/components**: Contains all the React components used in the application.
+    -   **/ui**: Contains the reusable UI components from shadcn/ui.
+    -   `navbar.tsx`: The navigation bar component.
+    -   `hero.tsx`: The hero section component.
+    -   `about.tsx`: The about section component.
+    -   `projects.tsx`: The projects section component.
+    -   `skills.tsx`: The skills section component.
+    -   `timeline.tsx`: The timeline section component.
+    -   `contact.tsx`: The contact section component.
+    -   `footer.tsx`: The footer component.
+-   **/lib**: Contains utility functions and data.
+-   **/public**: Contains static assets like images and fonts.
+-   **/styles**: Contains global styles.
