@@ -76,11 +76,6 @@ export function Navbar() {
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
             </a>
           ))}
-          <a href="/placeholder-cv.pdf" download>
-            <Button variant="default" size="sm" className="rounded-full px-6 cursor-pointer">
-              Download CV
-            </Button>
-          </a>
           <ThemeToggleButton />
         </nav>
 
@@ -117,9 +112,6 @@ export function Navbar() {
                   {link.name}
                 </a>
               ))}
-              <a href="/placeholder-cv.pdf" download className="w-full">
-                <Button className="w-full rounded-full mt-4 cursor-pointer">Download CV</Button>
-              </a>
             </div>
           </motion.div>
         )}
