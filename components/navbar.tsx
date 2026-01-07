@@ -19,6 +19,26 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault()
+    const href = e.currentTarget.getAttribute('href')
+    if (!href || !href.startsWith('#')) return
+
+    const targetId = href.substring(1)
+    const targetElement = document.getElementById(targetId)
+
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      })
+    }
+    // Close mobile menu if it's open
+    if (isMobileMenuOpen) {
+      setIsMobileMenuOpen(false)
+    }
+  }
+
   const navLinks = [
     { name: "I am", href: "#about" },
     { name: "Project", href: "#work" },
@@ -36,23 +56,26 @@ export function Navbar() {
       }`}
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
-        <Link href="/" className="text-2xl font-bold tracking-tighter">
+        <Link href="/" className="text-2xl font-bold tracking-tighter" onClick={(e) => {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }}>
           CW.
         </Link>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <Link
+            <a
               key={link.name}
               href={link.href}
-              className="text-sm font-medium hover:text-primary transition-colors relative group"
+              onClick={handleLinkClick}
+              className="text-sm font-medium hover:text-primary transition-colors relative group cursor-pointer"
             >
               {link.name}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
-            </Link>
+            </a>
           ))}
-          {/* TODO: Replace with your actual CV file */}
           <a href="/placeholder-cv.pdf" download>
             <Button variant="default" size="sm" className="rounded-full px-6 cursor-pointer">
               Download CV
@@ -85,17 +108,17 @@ export function Navbar() {
           >
             <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
               {navLinks.map((link) => (
-                <Link
+                <a
                   key={link.name}
                   href={link.href}
-                  className="text-lg font-medium py-2 border-b border-border/50"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="text-lg font-medium py-2 border-b border-border/50 cursor-pointer"
+                  onClick={handleLinkClick}
                 >
                   {link.name}
-                </Link>
+                </a>
               ))}
               <a href="/placeholder-cv.pdf" download className="w-full">
-                <Button className="w-full rounded-full mt-4">Download CV</Button>
+                <Button className="w-full rounded-full mt-4 cursor-pointer">Download CV</Button>
               </a>
             </div>
           </motion.div>
