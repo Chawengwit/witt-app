@@ -33,9 +33,13 @@ export function Navbar() {
         block: 'start',
       })
     }
+    
     // Close mobile menu if it's open
     if (isMobileMenuOpen) {
-      setIsMobileMenuOpen(false)
+      // Delay closing to allow scroll to start
+      setTimeout(() => {
+        setIsMobileMenuOpen(false)
+      }, 150)
     }
   }
 
