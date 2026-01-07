@@ -7,6 +7,8 @@ import { Button } from "@/components/ui/button"
 import { motion, AnimatePresence } from "framer-motion"
 import { ThemeToggleButton } from "./theme-toggle-button"
 
+import { handleSmoothScroll } from "@/lib/utils"
+
 export function Navbar() {
   const [isScrolled, setIsScrolled] = React.useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false)
@@ -20,21 +22,7 @@ export function Navbar() {
   }, [])
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault()
-    const href = e.currentTarget.getAttribute('href')
-    if (!href || !href.startsWith('#')) return
-
-    const targetId = href.substring(1)
-    const targetElement = document.getElementById(targetId)
-
-    if (targetElement) {
-      targetElement.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
-      })
-    }
-    
-    // Close mobile menu if it's open
+    handleSmoothScroll(e)
     if (isMobileMenuOpen) {
       setIsMobileMenuOpen(false)
     }
