@@ -36,7 +36,6 @@ export function Navbar() {
     
     // Close mobile menu if it's open
     if (isMobileMenuOpen) {
-      // Delay closing to allow scroll to start
       setTimeout(() => {
         setIsMobileMenuOpen(false)
       }, 150)
@@ -49,7 +48,7 @@ export function Navbar() {
     { name: "Stack", href: "#skills" },
     { name: "Journey", href: "#timeline" },
     { name: "Find Me", href: "#contact" },
-  ]
+]
 
   return (
     <header
