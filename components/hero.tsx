@@ -45,7 +45,7 @@ export function Hero() {
           <div className="flex flex-wrap gap-4 pt-4">
             <Button asChild size="lg" className="rounded-full px-8 text-base group">
               <a href="#contact" onClick={handleSmoothScroll} className="flex items-center gap-2 cursor-pointer">
-                Let's work together 
+                Work together 
                 <motion.div
                   initial={{ x: 0 }}
                   whileHover={{ x: 4 }}
