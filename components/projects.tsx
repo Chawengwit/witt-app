@@ -10,7 +10,7 @@ import { projects } from "@/lib/data"
 
 export function Projects() {
   return (
-    <section id="work" className="py-20">
+    <section id="work" className="py-20 scroll-mt-20">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
           <div>

@@ -5,7 +5,7 @@ export const projects = [
   {
     title: "Media Platform Template",
     role: "UX/UI • Fullstack Developer",
-    description: "Landing page and admin panel blend marketing content with authenticated management workflows, serving responsive product galleries.",
+    description: "The landing page and admin panel seamlessly combine engaging marketing content with secure, authenticated management workflows, showcasing responsive and visually rich product galleries.",
     tags: ["Javascript", "Node.js", "PostgreSQL", "S3", "Docker"],
     metrics: "",
     images: ["/d1-A.png", "/d2-A.png"],
@@ -25,7 +25,7 @@ export const projects = [
   {
     title: "Personal Profile Web App",
     role: "UX/UI • Fullstack Developer",
-    description: "A customizable personal portfolio web app with “Edit Mode” accessible via keyboard shortcut + password prompt. Built for creators who want a no-login, client-side editable template—ideal for digital product sales.",
+    description: "A customizable personal portfolio web application designed to support professionals across all industries and business types, enhancing credibility and presenting a more polished, professional image.",
     tags: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
     metrics: "",
     images: ["/p1-A.png"],

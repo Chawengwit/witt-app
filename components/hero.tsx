@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
 import { ArrowRight, Code, Database, Layout } from 'lucide-react'
-import Link from "next/link"
+import { handleSmoothScroll } from "@/lib/utils"
 
 export function Hero() {
   return (
@@ -44,8 +44,8 @@ export function Hero() {
 
           <div className="flex flex-wrap gap-4 pt-4">
             <Button asChild size="lg" className="rounded-full px-8 text-base group">
-              <Link href="#contact" className="flex items-center gap-2">
-                Let's work together 
+              <a href="#contact" onClick={handleSmoothScroll} className="flex items-center gap-2 cursor-pointer">
+                Work together 
                 <motion.div
                   initial={{ x: 0 }}
                   whileHover={{ x: 4 }}
@@ -54,10 +54,10 @@ export function Hero() {
                 >
                   <ArrowRight className="h-4 w-4" />
                 </motion.div>
-              </Link>
+              </a>
             </Button>
             <Button asChild variant="outline" size="lg" className="rounded-full px-8 text-base">
-              <Link href="#work">View my work</Link>
+              <a href="#work" onClick={handleSmoothScroll} className="cursor-pointer">View my work</a>
             </Button>
           </div>
         </motion.div>
